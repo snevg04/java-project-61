@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.51.0"
+    id("org.sonarqube") version "7.1.0.6387"
     application
 }
 
@@ -27,4 +28,11 @@ application {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "snevg04_java-project-61")
+        property("sonar.organization", "sn-evg-04")
+    }
 }
