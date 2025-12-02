@@ -10,7 +10,7 @@ class Even {
             var answer = Even.takeTurn();
 
             if (answer.equals("correct")) {
-                score+= 1;
+                score += 1;
             } else {
                 return;
             }
@@ -23,7 +23,7 @@ class Even {
         var correctAnswer = currentNumber % 2 == 0 ? "yes" : "no";
 
         System.out.println("Question: " + currentNumber);
-        System.out.print("Your answer " );
+        System.out.print("Your answer ");
 
         var answer = Cli.scanInput();
 
@@ -31,8 +31,8 @@ class Even {
             System.out.println("Correct!");
             return "correct";
         } else {
-            System.out.println(("'" + answer + "' is wrong answer ;(. " +
-                    "Correct answer was '" + correctAnswer + "'."));
+            System.out.println(("'" + answer + "' is wrong answer ;(. "
+                    + "Correct answer was '" + correctAnswer + "'."));
             System.out.println("Let's try again, " + App.name + "!");
             return "incorrect";
         }
