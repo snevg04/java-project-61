@@ -32,7 +32,7 @@ class Even {
             return "correct";
         } else {
             System.out.println(("'" + answer + "' is wrong answer ;(. " +
-                    "Correct answer was '" + correctAnswer + "'"));
+                    "Correct answer was '" + correctAnswer + "'."));
             System.out.println("Let's try again, " + App.name + "!");
             return "incorrect";
         }
@@ -41,7 +41,7 @@ class Even {
 
     public static int getRandomNumber() {
         Random random = new Random();
-        return random.nextInt();
+        return random.nextInt(1000);
     }
 
 }
