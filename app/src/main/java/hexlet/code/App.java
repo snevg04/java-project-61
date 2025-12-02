@@ -14,12 +14,13 @@ class App {
     }
 
     public static void takeYourPick() {
-        System.out.println("""
+        System.out.print("""
                 Please enter the game number and press Enter.
                 1 – Greet
                 0 – Exit
                 """
         );
+        System.out.print("Your choice: ");
 
         var pick = Cli.scanInput();
 
