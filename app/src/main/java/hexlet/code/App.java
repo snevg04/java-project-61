@@ -5,11 +5,13 @@ class App {
         App.takeYourPick();
     }
 
+    public static String name;
+
     public static void greeting() {
         System.out.println("Welcome to the Brain Games!");
 
         System.out.println("May I have your name?");
-        var name = Cli.scanInput();
+        name = Cli.scanInput();
         System.out.println("Hello, " + name + "!");
     }
 
@@ -17,6 +19,7 @@ class App {
         System.out.print("""
                 Please enter the game number and press Enter.
                 1 – Greet
+                2 - Even
                 0 – Exit
                 """
         );
@@ -28,12 +31,16 @@ class App {
             case "1":
                 App.greeting();
                 break;
+            case "2":
+                App.greeting();
+                Even.playGame();
+                break;
             case "0":
                 break;
             default:
                 System.out.println("Invalid option");
                 App.takeYourPick();
         }
-
     }
+
 }
