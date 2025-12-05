@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.BrainGamesAPI;
+import hexlet.code.RandomGenerator;
 
 public class Calculator implements BrainGamesAPI {
     private int question;
@@ -23,7 +24,7 @@ public class Calculator implements BrainGamesAPI {
                 question = firstNumber - secondNumber;
                 questionString = firstNumber + " - " + secondNumber;
                 break;
-            case 2:
+            default:
                 question = firstNumber * secondNumber;
                 questionString = firstNumber + " * " + secondNumber;
                 break;

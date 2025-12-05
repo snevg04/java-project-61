@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.*;
+import hexlet.code.BrainGamesAPI;
+import hexlet.code.RandomGenerator;
 
 public class Even implements BrainGamesAPI {
     public int question;
@@ -20,13 +21,3 @@ public class Even implements BrainGamesAPI {
     }
 
 }
-
-
-// System.out.println("Question: " + currentNumber);
-//        System.out.print("Your answer ");
-//
-//answer = Cli.scanInput();
-//
-//        if (answer.equals(correctAnswer)) {
-//        return "correct";
-//        }
