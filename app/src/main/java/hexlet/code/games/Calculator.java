@@ -1,0 +1,39 @@
+package hexlet.code.games;
+
+import hexlet.code.BrainGamesAPI;
+
+public class Calculator implements BrainGamesAPI {
+    private int question;
+    private String questionString;
+    public void getRules() {
+
+    }
+
+    public void getQuestion() {
+        var firstNumber = RandomGenerator.generateNumber(100);
+        var secondNumber = RandomGenerator.generateNumber(100);
+        var operationNumber = RandomGenerator.generateNumber(2);
+
+        switch (operationNumber) {
+            case 0:
+                question = firstNumber + secondNumber;
+                questionString = firstNumber + " + " + secondNumber;
+                break;
+            case 1:
+                question = firstNumber - secondNumber;
+                questionString = firstNumber + " - " + secondNumber;
+                break;
+            case 2:
+                question = firstNumber * secondNumber;
+                questionString = firstNumber + " * " + secondNumber;
+                break;
+        }
+
+        System.out.println("Question: " + questionString);
+    }
+
+    public String getCorrectAnswer() {
+        return Integer.toString(question);
+    }
+
+}
