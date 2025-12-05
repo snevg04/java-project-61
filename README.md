@@ -15,4 +15,9 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=snevg04_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=snevg04_java-project-61)
 
 # Even game example
+
 [![asciicast](https://asciinema.org/a/ZXOI0E0vpPZ9U5xtQs3Ef4GEo.svg)](https://asciinema.org/a/ZXOI0E0vpPZ9U5xtQs3Ef4GEo)
+
+# Calculator game example
+
+[![asciicast](https://asciinema.org/a/SO7lE2BrBZJcF0kjdASlAvG7K.svg)](https://asciinema.org/a/SO7lE2BrBZJcF0kjdASlAvG7K)
