@@ -17,6 +17,7 @@ public class Engine {
                 1 – Greet
                 2 - Even
                 3 – Calculator
+                4 - GCD
                 0 – Exit
                 """
         );
