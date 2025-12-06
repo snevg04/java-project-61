@@ -9,4 +9,18 @@ public class RandomGenerator {
         return random.nextInt(number);
     }
 
+    public static int[] generateProgression(int difficulty) {
+        var itemsCount = 10;
+        int[] progressionArray = new int[itemsCount];
+        var seed = generateNumber(difficulty);
+        var step = generateNumber(9);
+        for (var i = 0; i < progressionArray.length; i++) {
+            var currentElement = seed + i * (step + 1);
+            progressionArray[i] = currentElement;
+        }
+
+        return progressionArray;
+
+    }
+
 }
