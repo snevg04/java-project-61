@@ -6,6 +6,7 @@ import hexlet.code.RandomGenerator;
 public class Calculator implements BrainGamesAPI {
     private int question;
     private String questionString;
+    private int difficulty = 100;
 
     public void getRules() {
         System.out.println("What is the result of the expression?");
