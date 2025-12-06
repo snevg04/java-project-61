@@ -4,7 +4,7 @@ import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
 public class Even implements BrainGamesAPI {
-    public int question;
+    private int question;
 
     public void getRules() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
