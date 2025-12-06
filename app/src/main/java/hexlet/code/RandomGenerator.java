@@ -5,8 +5,8 @@ import java.util.Random;
 public class RandomGenerator {
     public static Random random = new Random();
 
-    public static int generateNumber(int number) {
-        return random.nextInt(number);
+    public static int generateNumber(int difficulty) {
+        return random.nextInt(difficulty);
     }
 
     public static int[] generateProgression(int difficulty) {
