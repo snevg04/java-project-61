@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 public class Engine {
     private static String name;
@@ -18,6 +19,7 @@ public class Engine {
                 2 - Even
                 3 – Calculator
                 4 - GCD
+                5 - Progression
                 0 – Exit
                 """
         );
@@ -36,6 +38,9 @@ public class Engine {
                 break;
             case 4:
                 run(new GCD());
+                break;
+            case 5:
+                run(new Progression());
                 break;
             case 0:
                 break;
