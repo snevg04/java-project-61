@@ -21,3 +21,7 @@
 # Calculator game demo
 
 [![asciicast](https://asciinema.org/a/bB5PcPTUjExIIfCC3jFLedjZk.svg)](https://asciinema.org/a/bB5PcPTUjExIIfCC3jFLedjZk)
+
+# GCD game demo
+
+[![asciicast](https://asciinema.org/a/IlvKVN7pXxl7wtY6zprUf8yVt.svg)](https://asciinema.org/a/IlvKVN7pXxl7wtY6zprUf8yVt)
