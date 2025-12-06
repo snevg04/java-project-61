@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
+import hexlet.code.games.GCD;
 
 public class Engine {
     private static String name;
@@ -32,6 +33,9 @@ public class Engine {
             case 3:
                 run(new Calculator());
                 break;
+            case 4:
+                run(new GCD());
+                break;
             case 0:
                 break;
             default:
@@ -59,8 +63,8 @@ public class Engine {
                 return;
             }
         }
+        System.out.println("Congratulations, " + name + "!");
 
-        winMessage();
     }
 
     public void greeting() {
@@ -70,40 +74,4 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
     }
 
-    public void winMessage() {
-        System.out.println("Congratulations, " + name + "!");
-    }
 }
-
-//    public void scoreCounter() {
-//        var score = 0;
-//        while (score < 3) {
-//            var correctAnswer = Even.answer;
-//            var userAnswer = Cli.scanInput();
-//            if (correctAnswer.equals(userAnswer) {
-//                score += 1;
-//            } else {
-//                Engine.loseMessage();
-//            }
-//
-//        }
-
-
-
-// сделать even.cycle?
-//    public static void answerCheck() {
-//        var answer = ввод
-//            if (!answer.equals(Even.answer)) {
-//                return
-//            }
-//            } else {
-//
-//                return;
-//            }
-////        }
-//    }
-
-//    System.out.println("Correct!");
-////
-
-//
