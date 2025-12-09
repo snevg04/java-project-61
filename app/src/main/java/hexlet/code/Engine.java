@@ -4,6 +4,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 public class Engine {
     private static String name;
@@ -18,8 +19,9 @@ public class Engine {
                 1 – Greet
                 2 - Even
                 3 – Calculator
-                4 - GCD
-                5 - Progression
+                4 – GCD
+                5 – Progression
+                6 – Prime
                 0 – Exit
                 """
         );
@@ -41,6 +43,9 @@ public class Engine {
                 break;
             case 5:
                 run(new Progression());
+                break;
+            case 6:
+                run(new Prime());
                 break;
             case 0:
                 break;
