@@ -29,3 +29,7 @@
 # Progression game demo 
 
 [![asciicast](https://asciinema.org/a/PTXC9lxnGZp8xM9csSbqf0NsE.svg)](https://asciinema.org/a/PTXC9lxnGZp8xM9csSbqf0NsE)
+
+# Prime game demo
+
+[![asciicast](https://asciinema.org/a/C0i0PZp0bzjn4frCG1qOZ9deu.svg)](https://asciinema.org/a/C0i0PZp0bzjn4frCG1qOZ9deu)
