@@ -21,7 +21,7 @@ public class Progression implements BrainGamesAPI {
         }
 
         answer = progressionString[missingProgressionItem];
-        progressionString[missingProgressionItem] = ".. ";
+        progressionString[missingProgressionItem] = "..";
 
         System.out.println("Question: " + String.join(" ", progressionString));
 
