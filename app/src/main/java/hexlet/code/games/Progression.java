@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
-import java.util.Arrays;
-
 public class Progression implements BrainGamesAPI {
     private int difficulty = 100;
     private String answer;
