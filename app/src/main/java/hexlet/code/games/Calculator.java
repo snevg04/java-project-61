@@ -3,19 +3,18 @@ package hexlet.code.games;
 import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
-public class Calculator implements BrainGamesAPI {
+public final class Calculator implements BrainGamesAPI {
     private int question;
     private String questionString;
-    private int difficulty = 100;
 
     public void getRules() {
         System.out.println("What is the result of the expression?");
     }
 
     public void getQuestion() {
-        var firstNumber = RandomGenerator.generateNumber(100);
-        var secondNumber = RandomGenerator.generateNumber(100);
-        var operationNumber = RandomGenerator.generateNumber(2);
+        var firstNumber = RandomGenerator.generateNumber();
+        var secondNumber = RandomGenerator.generateNumber();
+        var operationNumber = RandomGenerator.generateOperation(3);
 
         switch (operationNumber) {
             case 0:

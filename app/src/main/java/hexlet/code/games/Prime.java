@@ -3,9 +3,8 @@ package hexlet.code.games;
 import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
-public class Prime implements BrainGamesAPI {
+public final class Prime implements BrainGamesAPI {
     private boolean answer;
-    private int difficulty = 10;
     private int question;
 
     public void getRules() {
@@ -13,7 +12,7 @@ public class Prime implements BrainGamesAPI {
     }
 
     public void getQuestion() {
-        question = RandomGenerator.generateNumber(difficulty);
+        question = RandomGenerator.generateNumber();
 
         System.out.println("Question: " + question);
     }

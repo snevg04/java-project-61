@@ -6,7 +6,7 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-public class Engine {
+public final class Engine {
     private static String name;
 
     public Engine() {

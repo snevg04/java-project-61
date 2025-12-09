@@ -3,8 +3,7 @@ package hexlet.code.games;
 import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
-public class Progression implements BrainGamesAPI {
-    private int difficulty = 100;
+public final class Progression implements BrainGamesAPI {
     private String answer;
 
     public void getRules() {
@@ -12,8 +11,8 @@ public class Progression implements BrainGamesAPI {
     }
 
     public void getQuestion() {
-        var currentProgression = RandomGenerator.generateProgression(difficulty);
-        var missingProgressionItem = RandomGenerator.generateNumber(currentProgression.length);
+        var currentProgression = RandomGenerator.generateProgression();
+        var missingProgressionItem = RandomGenerator.generateMissingElement();
         String[] progressionString = new String[currentProgression.length];
 
         for (int i = 0; i < currentProgression.length; i++) {

@@ -3,18 +3,17 @@ package hexlet.code.games;
 import hexlet.code.BrainGamesAPI;
 import hexlet.code.RandomGenerator;
 
-public class GCD implements BrainGamesAPI {
+public final class GCD implements BrainGamesAPI {
     private int firstNumber;
     private int secondNumber;
-    private int difficulty = 100;
 
     public void getRules() {
         System.out.println("Find the greatest common divisor of given numbers.");
     }
 
     public void getQuestion() {
-        firstNumber = RandomGenerator.generateNumber(difficulty);
-        secondNumber = RandomGenerator.generateNumber(difficulty);
+        firstNumber = RandomGenerator.generateNumber();
+        secondNumber = RandomGenerator.generateNumber();
 
         System.out.println("Question: " + firstNumber + " " + secondNumber);
     }
