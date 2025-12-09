@@ -15,7 +15,7 @@ public class Prime implements BrainGamesAPI {
     public void getQuestion() {
         question = RandomGenerator.generateNumber(difficulty);
 
-        System.out.println(question);
+        System.out.println("Question: " + question);
     }
 
     public boolean isPrime() {

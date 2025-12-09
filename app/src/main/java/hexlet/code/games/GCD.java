@@ -9,14 +9,14 @@ public class GCD implements BrainGamesAPI {
     private int difficulty = 100;
 
     public void getRules() {
-        System.out.println("Find the greatest common divisor of given numbers");
+        System.out.println("Find the greatest common divisor of given numbers.");
     }
 
     public void getQuestion() {
         firstNumber = RandomGenerator.generateNumber(difficulty);
         secondNumber = RandomGenerator.generateNumber(difficulty);
 
-        System.out.println(firstNumber + " " + secondNumber);
+        System.out.println("Question: " + firstNumber + " " + secondNumber);
     }
 
     public String getCorrectAnswer() {

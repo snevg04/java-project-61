@@ -63,10 +63,12 @@ public class Engine {
         var score = 0;
         while (score < 3) {
             game.getQuestion();
+            System.out.print("Your answer: ");
             var correctAnswer = game.getCorrectAnswer();
             var userAnswer = Cli.scanInput();
             if (userAnswer.equals(correctAnswer)) {
                 score += 1;
+                System.out.println("Correct!");
             } else {
                 System.out.println(("'" + userAnswer + "' is wrong answer ;(."
                         + "Correct answer was '" + correctAnswer + "'."));

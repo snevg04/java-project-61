@@ -13,7 +13,7 @@ public class Even implements BrainGamesAPI {
 
     public void getQuestion() {
         question = RandomGenerator.generateNumber(difficulty);
-        System.out.println(question);
+        System.out.println("Question: " + question);
         getCorrectAnswer();
     }
 
