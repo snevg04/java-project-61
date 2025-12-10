@@ -16,20 +16,20 @@
 
 # Even game demo
 
-[![asciicast](https://asciinema.org/a/ZXOI0E0vpPZ9U5xtQs3Ef4GEo.svg)](https://asciinema.org/a/ZXOI0E0vpPZ9U5xtQs3Ef4GEo)
+[![asciicast](https://asciinema.org/a/vm0kpA4L01lqsxK1iDi2v4BGJ.svg)](https://asciinema.org/a/vm0kpA4L01lqsxK1iDi2v4BGJ)
 
 # Calculator game demo
 
-[![asciicast](https://asciinema.org/a/bB5PcPTUjExIIfCC3jFLedjZk.svg)](https://asciinema.org/a/bB5PcPTUjExIIfCC3jFLedjZk)
+[![asciicast](https://asciinema.org/a/hxIHEKBI9hzp7UGEbAx8lYEyo.svg)](https://asciinema.org/a/hxIHEKBI9hzp7UGEbAx8lYEyo)
 
 # GCD game demo
 
-[![asciicast](https://asciinema.org/a/IlvKVN7pXxl7wtY6zprUf8yVt.svg)](https://asciinema.org/a/IlvKVN7pXxl7wtY6zprUf8yVt)
+[![asciicast](https://asciinema.org/a/2G0eTMe5D5jKp2Ph6c23Ogfjd.svg)](https://asciinema.org/a/2G0eTMe5D5jKp2Ph6c23Ogfjd)
 
 # Progression game demo 
 
-[![asciicast](https://asciinema.org/a/PTXC9lxnGZp8xM9csSbqf0NsE.svg)](https://asciinema.org/a/PTXC9lxnGZp8xM9csSbqf0NsE)
+[![asciicast](https://asciinema.org/a/QPw9TxAEmSbSod3q9mWedDJOq.svg)](https://asciinema.org/a/QPw9TxAEmSbSod3q9mWedDJOq)
 
 # Prime game demo
 
-[![asciicast](https://asciinema.org/a/C0i0PZp0bzjn4frCG1qOZ9deu.svg)](https://asciinema.org/a/C0i0PZp0bzjn4frCG1qOZ9deu)
+[![asciicast](https://asciinema.org/a/HvLCmqCVRVRnSNFekekHoz0lj.svg)](https://asciinema.org/a/HvLCmqCVRVRnSNFekekHoz0lj)
