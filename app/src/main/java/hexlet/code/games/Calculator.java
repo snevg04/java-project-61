@@ -6,6 +6,7 @@ import hexlet.code.RandomGenerator;
 public final class Calculator implements BrainGamesAPI {
     private int question;
     private String questionString;
+    private static final int DEFAULT_OPERATIONS_NUMBER = 3;
 
     public void getRules() {
         System.out.println("What is the result of the expression?");
@@ -14,8 +15,8 @@ public final class Calculator implements BrainGamesAPI {
     public void getQuestion() {
         var firstNumber = RandomGenerator.generateNumber();
         var secondNumber = RandomGenerator.generateNumber();
-        var gameOperations = 3;
-        var operationNumber = RandomGenerator.generateOperation(gameOperations);
+
+        var operationNumber = RandomGenerator.generateOperation(DEFAULT_OPERATIONS_NUMBER);
 
         switch (operationNumber) {
             case 0:

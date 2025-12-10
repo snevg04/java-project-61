@@ -15,6 +15,7 @@ public final class Engine {
     private static final int PROGRESSION_GAME = 5;
     private static final int PRIME_GAME = 6;
     private static final int EXIT = 0;
+    private static final int ROUNDS_TO_WIN = 3;
 
     public Engine() {
 
@@ -80,7 +81,7 @@ public final class Engine {
         greeting();
         game.getRules();
         var score = 0;
-        while (score < 3) {
+        while (score < ROUNDS_TO_WIN) {
             game.getQuestion();
             System.out.print("Your answer: ");
             var correctAnswer = game.getCorrectAnswer();

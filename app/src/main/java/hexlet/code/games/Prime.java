@@ -6,6 +6,7 @@ import hexlet.code.RandomGenerator;
 public final class Prime implements BrainGamesAPI {
     private boolean answer;
     private int question;
+    private static final int FIRST_ODD_DIVISOR = 3;
 
     public void getRules() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -27,11 +28,9 @@ public final class Prime implements BrainGamesAPI {
             return false;
         }
 
-
-        var firstOddDivisor = 3;
         var currentNumberSquareRoot = Math.sqrt(question);
 
-        for (var i = firstOddDivisor; i <= currentNumberSquareRoot; i += 2) {
+        for (var i = FIRST_ODD_DIVISOR; i <= currentNumberSquareRoot; i += 2) {
             if (question % i == 0) {
                 return false;
             }
