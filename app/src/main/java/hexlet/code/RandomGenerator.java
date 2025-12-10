@@ -13,7 +13,7 @@ public final class RandomGenerator {
     }
 
     public static int generateOperation(int operationsCount) {
-        return RANDOM.nextInt(operationsCount - 1);
+        return RANDOM.nextInt(operationsCount);
     }
 
     public static int[] generateProgression() {
