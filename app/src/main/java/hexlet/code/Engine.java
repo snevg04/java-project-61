@@ -8,6 +8,13 @@ import hexlet.code.games.Prime;
 
 public final class Engine {
     private static String name;
+    private static final int GREET_GAME = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
+    private static final int EXIT = 0;
 
     public Engine() {
 
@@ -25,32 +32,44 @@ public final class Engine {
                 0 – Exit
                 """
         );
+
         System.out.print("Your choice: ");
-        int choice = Integer.parseInt(Cli.scanInput());
+
+        int choice;
+
+        try {
+            choice = Integer.parseInt(Cli.scanInput());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please insert correct number.");
+            System.out.println(" ");
+            launch();
+            return;
+        }
+
 
         switch (choice) {
-            case 1:
+            case GREET_GAME:
                 greeting();
                 break;
-            case 2:
+            case EVEN_GAME:
                 run(new Even());
                 break;
-            case 3:
+            case CALC_GAME:
                 run(new Calculator());
                 break;
-            case 4:
+            case GCD_GAME:
                 run(new GCD());
                 break;
-            case 5:
+            case PROGRESSION_GAME:
                 run(new Progression());
                 break;
-            case 6:
+            case PRIME_GAME:
                 run(new Prime());
                 break;
-            case 0:
+            case EXIT:
                 break;
             default:
-                System.out.println("Invalid number. Please insert correct number.");
+                System.out.println("Invalid input. Please insert correct number.");
                 System.out.println(" ");
                 launch();
                 break;
