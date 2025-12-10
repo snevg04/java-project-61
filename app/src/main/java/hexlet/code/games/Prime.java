@@ -28,10 +28,10 @@ public final class Prime implements BrainGamesAPI {
         }
 
 
-
+        var firstOddDivisor = 3;
         var currentNumberSquareRoot = Math.sqrt(question);
 
-        for (var i = 3; i <= currentNumberSquareRoot; i += 2) {
+        for (var i = firstOddDivisor; i <= currentNumberSquareRoot; i += 2) {
             if (question % i == 0) {
                 return false;
             }

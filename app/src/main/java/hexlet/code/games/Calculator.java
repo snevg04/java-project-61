@@ -14,7 +14,8 @@ public final class Calculator implements BrainGamesAPI {
     public void getQuestion() {
         var firstNumber = RandomGenerator.generateNumber();
         var secondNumber = RandomGenerator.generateNumber();
-        var operationNumber = RandomGenerator.generateOperation(3);
+        var gameOperations = 3;
+        var operationNumber = RandomGenerator.generateOperation(gameOperations);
 
         switch (operationNumber) {
             case 0:
