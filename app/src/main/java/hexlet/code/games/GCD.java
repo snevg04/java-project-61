@@ -15,6 +15,14 @@ public final class GCD implements BrainGamesAPI {
         firstNumber = RandomGenerator.generateNumber();
         secondNumber = RandomGenerator.generateNumber();
 
+        if (firstNumber == 0) {
+            firstNumber += 1;
+        }
+
+        if (secondNumber == 0) {
+            secondNumber += 1;
+        }
+
         System.out.println("Question: " + firstNumber + " " + secondNumber);
     }
 
