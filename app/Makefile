@@ -4,3 +4,5 @@ run-dist:
 
 build:
 	./gradlew build
+
+.PHONY: build
