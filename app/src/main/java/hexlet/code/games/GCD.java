@@ -7,7 +7,7 @@ public final class GCD {
     private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_MIN_BOUND = 1;
-    private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
+    private static final int DEFAULT_RANDOM_MAX_BOUND = 101;
     private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static final Random RANDOM = new Random();
 
@@ -23,7 +23,7 @@ public final class GCD {
             String answer;
             var firstCol = 0;
             var secondCol = firstCol + 1;
-            int firstNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MIN_BOUND);
+            int firstNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
             int secondNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
 
             question = firstNumber + " " + secondNumber;
