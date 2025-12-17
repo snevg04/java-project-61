@@ -22,7 +22,7 @@ public final class Engine {
             String question = round[0];
             String answer = round[1];
 
-            System.out.println(question);
+            System.out.println("Question: " + question);
             System.out.print("Your answer: ");
             var userAnswer = scanner.next();
 
