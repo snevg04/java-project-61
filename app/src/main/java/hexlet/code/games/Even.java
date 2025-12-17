@@ -5,15 +5,17 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class Even {
-    public static final Random RANDOM = new Random();
-    public static String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int DEFAULT_ROUNDS_NUMBER = 3;
+    private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
+    private static final String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final Random RANDOM = new Random();
 
     public static void run() {
         Engine.run(rules, generateRounds());
     }
 
     public static String[][] generateRounds() {
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[DEFAULT_ROUNDS_NUMBER][DEFAULT_ROUNDS_INFO_ITEMS];
 
         for (var row = 0; row < rounds.length; row++) {
             int question = RANDOM.nextInt();

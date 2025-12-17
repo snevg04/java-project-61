@@ -4,21 +4,24 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class Calculator {
-    public static final Random RANDOM = new Random();
-    public static String rules = "What is the result of the expression?";
+    private static final int DEFAULT_ROUNDS_NUMBER = 3;
+    private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
+    private static final int DEFAULT_OPERATIONS_NUMBER = 3;
+    private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
+    private static final String rules = "What is the result of the expression?";
+    private static final Random RANDOM = new Random();
 
     public static void run() {
         Engine.run(rules, generateRounds());
     }
 
     public static String[][] generateRounds() {
-        String[][] rounds = new String[3][2];
-        int operationsCount = 3;
+        String[][] rounds = new String[DEFAULT_ROUNDS_NUMBER][DEFAULT_ROUNDS_INFO_ITEMS];
 
         for (var row = 0; row < rounds.length; row++) {
-            int firstNumber = RANDOM.nextInt(100);
-            int secondNumber = RANDOM.nextInt(100);
-            int operationNumber = RANDOM.nextInt(operationsCount);
+            int firstNumber = RANDOM.nextInt(DEFAULT_RANDOM_MAX_BOUND);
+            int secondNumber = RANDOM.nextInt(DEFAULT_RANDOM_MAX_BOUND);
+            int operationNumber = RANDOM.nextInt(DEFAULT_OPERATIONS_NUMBER);
             int question;
             String questionString;
             String answer;
