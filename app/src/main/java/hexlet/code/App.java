@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.*;
+import java.util.Scanner;
 
 public class App {
 
@@ -9,6 +10,8 @@ public class App {
     }
 
     public static void launchMenu() {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.print("""
                 Please enter the game number and press Enter.
                 1 – Greet
@@ -23,7 +26,7 @@ public class App {
 
         System.out.print("Your choice: ");
 
-        String choice = "";
+        String choice = scanner.next();
 
         switch (choice) {
             case "1":
