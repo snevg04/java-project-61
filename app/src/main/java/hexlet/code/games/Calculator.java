@@ -7,7 +7,7 @@ public final class Calculator {
     private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_OPERATIONS_NUMBER = 3;
-    private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
+    private static final int DEFAULT_RANDOM_MAX_BOUND = 101;
     private static final String RULES = "What is the result of the expression?";
     private static final Random RANDOM = new Random();
 

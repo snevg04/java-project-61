@@ -7,7 +7,7 @@ public final class Prime {
     private static final int FIRST_ODD_DIVISOR = 3;
     private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
-    private static final int DEFAULT_RANDOM_BOUND = 100;
+    private static final int DEFAULT_RANDOM_BOUND = 101;
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final Random RANDOM = new Random();
 

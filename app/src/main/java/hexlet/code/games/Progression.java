@@ -8,7 +8,7 @@ public final class Progression {
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_MIN_STEP_BOUND = 1;
     private static final int DEFAULT_RANDOM_MAX_STEP_BOUND = 10;
-    private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
+    private static final int DEFAULT_RANDOM_MAX_BOUND = 101;
     private static final int DEFAULT_PROGRESSION_LENGTH = 10;
     private static String RULES = "What number is missing in the progression?";
     private static final Random RANDOM = new Random();
