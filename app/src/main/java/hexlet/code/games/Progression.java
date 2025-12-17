@@ -10,11 +10,11 @@ public final class Progression {
     private static final int DEFAULT_RANDOM_MAX_STEP_BOUND = 10;
     private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
     private static final int DEFAULT_PROGRESSION_LENGTH = 10;
-    private static final String rules = "What number is missing in the progression?";
+    private static String RULES = "What number is missing in the progression?";
     private static final Random RANDOM = new Random();
 
     public static void run() {
-        Engine.run(rules, generateRounds());
+        Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {

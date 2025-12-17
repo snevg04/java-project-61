@@ -8,11 +8,11 @@ public final class Calculator {
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_OPERATIONS_NUMBER = 3;
     private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
-    private static final String rules = "What is the result of the expression?";
+    private static final String RULES = "What is the result of the expression?";
     private static final Random RANDOM = new Random();
 
     public static void run() {
-        Engine.run(rules, generateRounds());
+        Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {

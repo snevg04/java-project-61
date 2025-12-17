@@ -8,11 +8,11 @@ public final class GCD {
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_MIN_BOUND = 1;
     private static final int DEFAULT_RANDOM_MAX_BOUND = 100;
-    private static final String rules = "Find the greatest common divisor of given numbers.";
+    private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static final Random RANDOM = new Random();
 
     public static void run() {
-        Engine.run(rules, generateRounds());
+        Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {

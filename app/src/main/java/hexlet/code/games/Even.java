@@ -1,17 +1,16 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public final class Even {
     private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
-    private static final String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final Random RANDOM = new Random();
 
     public static void run() {
-        Engine.run(rules, generateRounds());
+        Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {
