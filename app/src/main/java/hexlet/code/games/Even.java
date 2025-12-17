@@ -1,23 +1,32 @@
 package hexlet.code.games;
 
-import hexlet.code.BrainGamesAPI;
-import hexlet.code.RandomGenerator;
+import hexlet.code.Engine;
 
-public final class Even implements BrainGamesAPI {
-    private int question;
+import java.util.Random;
 
-    public void getRules() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+public final class Even {
+    public static final Random RANDOM = new Random();
+    public static String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
+    public static void run() {
+        Engine.run(rules, generateRounds());
     }
 
-    public void getQuestion() {
-        question = RandomGenerator.generateNumber();
-        System.out.println("Question: " + question);
-        getCorrectAnswer();
-    }
+    public static String[][] generateRounds() {
+        String[][] rounds = new String[3][2];
 
-    public String getCorrectAnswer() {
-        return question % 2 == 0 ? "yes" : "no";
+        for (var row = 0; row < rounds.length; row++) {
+            int question = RANDOM.nextInt();
+            String questionString = Integer.toString(question);
+            String answer = question % 2 == 0 ? "yes" : "no";
+            var firstCol = 0;
+            var secondCol = firstCol + 1;
+
+            rounds[row][firstCol] = questionString;
+            rounds[row][secondCol] = answer;
+        }
+
+        return rounds;
     }
 
 }

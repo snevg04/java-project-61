@@ -1,24 +1,39 @@
 package hexlet.code.games;
 
-import hexlet.code.BrainGamesAPI;
-import hexlet.code.RandomGenerator;
+import hexlet.code.Engine;
+import java.util.Random;
 
-public final class Prime implements BrainGamesAPI {
-    private boolean answer;
-    private int question;
+public final class Prime {
     private static final int FIRST_ODD_DIVISOR = 3;
+    public static final Random RANDOM = new Random();
+    public static String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public void getRules() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    public static void run() {
+        Engine.run(rules, generateRounds());
     }
 
-    public void getQuestion() {
-        question = RandomGenerator.generateNumber();
+    public static String[][] generateRounds() {
+        String[][] rounds = new String[3][2];
 
-        System.out.println("Question: " + question);
+        for (var row = 0; row < rounds.length; row++) {
+            String questionString;
+            String answer;
+            int firstCol = 0;
+            int secondCol = firstCol + 1;
+
+            int question = RANDOM.nextInt(100);
+            questionString = Integer.toString(question);
+            answer = isPrime(question) ? "yes" : "no";
+
+            rounds[row][firstCol] = questionString;
+            rounds[row][secondCol] = answer;
+
+        }
+
+        return rounds;
     }
 
-    public boolean isPrime() {
+    public static boolean isPrime(int question) {
 
         if (question == 2) {
             return true;
@@ -37,14 +52,5 @@ public final class Prime implements BrainGamesAPI {
         }
 
         return true;
-    }
-
-    public String getCorrectAnswer() {
-        answer = isPrime();
-
-        if (answer) {
-            return "yes";
-        }
-        return "no";
     }
 }

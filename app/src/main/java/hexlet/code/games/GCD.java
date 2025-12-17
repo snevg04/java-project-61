@@ -1,34 +1,29 @@
 package hexlet.code.games;
 
-import hexlet.code.BrainGamesAPI;
-import hexlet.code.RandomGenerator;
+import hexlet.code.Engine;
+import java.util.Random;
 
-public final class GCD implements BrainGamesAPI {
-    private int firstNumber;
-    private int secondNumber;
+public final class GCD {
+    public static final Random RANDOM = new Random();
+    public static String rules = "Find the greatest common divisor of given numbers.";
 
-    public void getRules() {
-        System.out.println("Find the greatest common divisor of given numbers.");
+    public static void run() {
+        Engine.run(rules, generateRounds());
     }
 
-    public void getQuestion() {
-        firstNumber = RandomGenerator.generateNumber();
-        secondNumber = RandomGenerator.generateNumber();
+    public static String[][] generateRounds() {
+        String[][] rounds = new String[3][2];
 
-        if (firstNumber == 0) {
-            firstNumber += 1;
-        }
+        for (var row = 0; row < rounds.length; row++) {
+            String question;
+            String answer;
+            var firstCol = 0;
+            var secondCol = firstCol + 1;
+            int firstNumber = RANDOM.nextInt(1, 100);
+            int secondNumber = RANDOM.nextInt(1, 100);
 
-        if (secondNumber == 0) {
-            secondNumber += 1;
-        }
+            question = firstNumber + " " + secondNumber;
 
-        System.out.println("Question: " + firstNumber + " " + secondNumber);
-    }
-
-    public String getCorrectAnswer() {
-
-        if (secondNumber != 0) {
             var a = firstNumber;
             var b = secondNumber;
 
@@ -38,10 +33,14 @@ public final class GCD implements BrainGamesAPI {
                 b = remainder;
             }
 
-            return Integer.toString(a);
-        } else {
-            return Integer.toString(secondNumber);
+            answer = Integer.toString(a);
+
+            rounds[row][firstCol] = question;
+            rounds[row][secondCol] = answer;
         }
+
+        return rounds;
     }
 
 }
+

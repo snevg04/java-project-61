@@ -1,32 +1,57 @@
 package hexlet.code.games;
 
-import hexlet.code.BrainGamesAPI;
-import hexlet.code.RandomGenerator;
+import hexlet.code.Engine;
+import java.util.Random;
 
-public final class Progression implements BrainGamesAPI {
-    private String answer;
+public final class Progression {
+    public static final Random RANDOM = new Random();
+    public static String rules = "What number is missing in the progression?";
 
-    public void getRules() {
-        System.out.println("What number is missing in the progression?");
+    public static void run() {
+        Engine.run(rules, generateRounds());
     }
 
-    public void getQuestion() {
-        var currentProgression = RandomGenerator.generateProgression();
-        var missingProgressionItem = RandomGenerator.generateMissingElement();
-        String[] progressionString = new String[currentProgression.length];
+    public static String[][] generateRounds() {
+        String[][] rounds = new String[3][2];
 
-        for (int i = 0; i < currentProgression.length; i++) {
-            progressionString[i] = String.valueOf(currentProgression[i]);
+        for (var row = 0; row < rounds.length; row++) {
+            var firstCol = 0;
+            var secondCol = firstCol + 1;
+            int[] progression = generateProgression();
+            int missingItem = RANDOM.nextInt(progression.length);
+            String question;
+            String answer;
+
+            String[] progressionString = new String[progression.length];
+
+            for (int i = 0; i < progression.length; i++) {
+                progressionString[i] = String.valueOf(progression[i]);
+            }
+
+            answer = progressionString[missingItem];
+            progressionString[missingItem] = "..";
+            question = String.join(" ", progressionString);
+
+            rounds[row][firstCol] = question;
+            rounds[row][secondCol] = answer;
+
         }
 
-        answer = progressionString[missingProgressionItem];
-        progressionString[missingProgressionItem] = "..";
-
-        System.out.println("Question: " + String.join(" ", progressionString));
-
+        return rounds;
     }
 
-    public String getCorrectAnswer() {
-        return answer;
+    public static int[] generateProgression() {
+        int progressionLength = 10;
+        int[] progression = new int[progressionLength];
+        var seed = RANDOM.nextInt(100);
+        var step = RANDOM.nextInt(1, 10);
+
+        for (var i = 0; i < progressionLength; i++) {
+            var currentElement = seed + i * (step);
+            progression[i] = currentElement;
+        }
+
+        return progression;
     }
+
 }
