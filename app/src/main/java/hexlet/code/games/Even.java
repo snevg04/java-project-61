@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class Even {
-    private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final Random RANDOM = new Random();
@@ -14,17 +13,17 @@ public final class Even {
     }
 
     public static String[][] generateRounds() {
-        String[][] rounds = new String[DEFAULT_ROUNDS_NUMBER][DEFAULT_ROUNDS_INFO_ITEMS];
+        String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
-        for (var row = 0; row < rounds.length; row++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             int question = RANDOM.nextInt();
             String questionString = Integer.toString(question);
             String answer = question % 2 == 0 ? "yes" : "no";
-            var firstCol = 0;
-            var secondCol = firstCol + 1;
+            var firstColumn = 0;
+            var secondColumn = firstColumn + 1;
 
-            rounds[row][firstCol] = questionString;
-            rounds[row][secondCol] = answer;
+            rounds[i][firstColumn] = questionString;
+            rounds[i][secondColumn] = answer;
         }
 
         return rounds;
