@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class Prime {
-    private static final int FIRST_ODD_DIVISOR = 3;
-    private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_BOUND = 101;
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -16,20 +14,20 @@ public final class Prime {
     }
 
     public static String[][] generateRounds() {
-        String[][] rounds = new String[DEFAULT_ROUNDS_NUMBER][DEFAULT_ROUNDS_INFO_ITEMS];
+        String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
-        for (var row = 0; row < rounds.length; row++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             String questionString;
             String answer;
-            int firstCol = 0;
-            int secondCol = firstCol + 1;
+            int firstColumn = 0;
+            int secondColumn = firstColumn + 1;
 
             int question = RANDOM.nextInt(DEFAULT_RANDOM_BOUND);
             questionString = Integer.toString(question);
             answer = isPrime(question) ? "yes" : "no";
 
-            rounds[row][firstCol] = questionString;
-            rounds[row][secondCol] = answer;
+            rounds[i][firstColumn] = questionString;
+            rounds[i][secondColumn] = answer;
 
         }
 
@@ -37,7 +35,7 @@ public final class Prime {
     }
 
     public static boolean isPrime(int question) {
-
+        int firstOddDivisor = 3;
         if (question == 2) {
             return true;
         }
@@ -48,7 +46,7 @@ public final class Prime {
 
         var currentNumberSquareRoot = Math.sqrt(question);
 
-        for (var i = FIRST_ODD_DIVISOR; i <= currentNumberSquareRoot; i += 2) {
+        for (var i = firstOddDivisor; i <= currentNumberSquareRoot; i += 2) {
             if (question % i == 0) {
                 return false;
             }
