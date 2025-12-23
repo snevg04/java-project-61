@@ -36,7 +36,7 @@ public final class GCD {
         return rounds;
     }
 
-    public static int calculateGCD (int a, int b) {
+    public static int calculateGCD(int a, int b) {
         while (b != 0) {
             var remainder = a % b;
             a = b;
