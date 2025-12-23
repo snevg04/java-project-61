@@ -35,7 +35,7 @@ public final class Prime {
     }
 
     public static boolean isPrime(int question) {
-        int firstOddDivisor = 3;
+        final int FIRST_ODD_DIVISOR = 3;
         if (question == 2) {
             return true;
         }
@@ -46,7 +46,7 @@ public final class Prime {
 
         var currentNumberSquareRoot = Math.sqrt(question);
 
-        for (var i = firstOddDivisor; i <= currentNumberSquareRoot; i += 2) {
+        for (var i = FIRST_ODD_DIVISOR; i <= currentNumberSquareRoot; i += 2) {
             if (question % i == 0) {
                 return false;
             }
