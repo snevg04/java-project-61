@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class GCD {
-    private static final int DEFAULT_ROUNDS_NUMBER = 3;
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_MIN_BOUND = 1;
     private static final int DEFAULT_RANDOM_MAX_BOUND = 101;
@@ -16,34 +15,35 @@ public final class GCD {
     }
 
     public static String[][] generateRounds() {
-        String[][] rounds = new String[DEFAULT_ROUNDS_NUMBER][DEFAULT_ROUNDS_INFO_ITEMS];
+        String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
-        for (var row = 0; row < rounds.length; row++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             String question;
             String answer;
-            var firstCol = 0;
-            var secondCol = firstCol + 1;
+            var firstColumn = 0;
+            var secondColumn = firstColumn + 1;
             int firstNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
             int secondNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
 
             question = firstNumber + " " + secondNumber;
 
-            var a = firstNumber;
-            var b = secondNumber;
+            answer = Integer.toString(calculateGCD(firstNumber, secondNumber));
 
-            while (b != 0) {
-                var remainder = a % b;
-                a = b;
-                b = remainder;
-            }
-
-            answer = Integer.toString(a);
-
-            rounds[row][firstCol] = question;
-            rounds[row][secondCol] = answer;
+            rounds[i][firstColumn] = question;
+            rounds[i][secondColumn] = answer;
         }
 
         return rounds;
+    }
+
+    public static int calculateGCD (int a, int b) {
+        while (b != 0) {
+            var remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+
+        return a;
     }
 
 }
