@@ -10,34 +10,26 @@ public final class Progression {
     private static final int DEFAULT_RANDOM_MAX_BOUND = 101;
     private static final int DEFAULT_PROGRESSION_LENGTH = 10;
     private static final String RULES = "What number is missing in the progression?";
-    private static final Random RANDOM = new Random();
 
     public static void run() {
         Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {
+        Random random = new Random();
         String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var firstColumn = 0;
             var secondColumn = firstColumn + 1;
-            int initialNumber = RANDOM.nextInt(DEFAULT_RANDOM_MAX_BOUND);
-            int step = RANDOM.nextInt(DEFAULT_RANDOM_MIN_STEP_BOUND, DEFAULT_RANDOM_MAX_STEP_BOUND);
-            int[] progression = generateProgression(initialNumber, step, DEFAULT_PROGRESSION_LENGTH);
-            int missingItem = RANDOM.nextInt(progression.length);
-            String question;
-            String answer;
+            int first = random.nextInt(DEFAULT_RANDOM_MAX_BOUND);
+            int step = random.nextInt(DEFAULT_RANDOM_MIN_STEP_BOUND, DEFAULT_RANDOM_MAX_STEP_BOUND);
+            String[] progression = makeProgression(first, step, DEFAULT_PROGRESSION_LENGTH);
+            int hiddenIndex = random.nextInt(progression.length);
 
-            String[] progressionString = new String[progression.length];
-
-            for (int j = 0; j < progression.length; j++) {
-                progressionString[j] = String.valueOf(progression[j]);
-            }
-
-            answer = progressionString[missingItem];
-            progressionString[missingItem] = "..";
-            question = String.join(" ", progressionString);
+            String answer = progression[hiddenIndex];
+            progression[hiddenIndex] = "..";
+            String question = String.join(" ", progression);
 
             rounds[i][firstColumn] = question;
             rounds[i][secondColumn] = answer;
@@ -47,12 +39,12 @@ public final class Progression {
         return rounds;
     }
 
-    public static int[] generateProgression(int initialNumber, int step, int length) {
-        int[] progression = new int[length];
+    public static String[] makeProgression(int first, int step, int length) {
+        String[] progression = new String[length];
 
         for (int i = 0; i < length; i++) {
-            var currentElement = initialNumber + i * (step);
-            progression[i] = currentElement;
+            var currentElement = first + i * (step);
+            progression[i] = Integer.toString(currentElement);
         }
 
         return progression;
