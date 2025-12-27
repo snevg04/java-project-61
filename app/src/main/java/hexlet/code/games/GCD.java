@@ -14,14 +14,14 @@ public final class GCD {
     }
 
     public static String[][] generateRounds() {
-        Random RANDOM = new Random();
+        Random random = new Random();
         String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var firstColumn = 0;
             var secondColumn = firstColumn + 1;
-            int firstNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
-            int secondNumber = RANDOM.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
+            int firstNumber = random.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
+            int secondNumber = random.nextInt(DEFAULT_RANDOM_MIN_BOUND, DEFAULT_RANDOM_MAX_BOUND);
 
             String question = firstNumber + " " + secondNumber;
             String answer = Integer.toString(calculateGCD(firstNumber, secondNumber));
