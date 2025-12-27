@@ -7,24 +7,22 @@ public final class Prime {
     private static final int DEFAULT_ROUNDS_INFO_ITEMS = 2;
     private static final int DEFAULT_RANDOM_BOUND = 101;
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static final Random RANDOM = new Random();
 
     public static void run() {
         Engine.run(RULES, generateRounds());
     }
 
     public static String[][] generateRounds() {
+        Random random = new Random();
         String[][] rounds = new String[Engine.ROUNDS][DEFAULT_ROUNDS_INFO_ITEMS];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            String questionString;
-            String answer;
             int firstColumn = 0;
             int secondColumn = firstColumn + 1;
+            int question = random.nextInt(DEFAULT_RANDOM_BOUND);
 
-            int question = RANDOM.nextInt(DEFAULT_RANDOM_BOUND);
-            questionString = Integer.toString(question);
-            answer = isPrime(question) ? "yes" : "no";
+            String questionString = Integer.toString(question);
+            String answer = isPrime(question) ? "yes" : "no";
 
             rounds[i][firstColumn] = questionString;
             rounds[i][secondColumn] = answer;
