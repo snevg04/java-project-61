@@ -54,7 +54,7 @@ public class App {
             case "0":
                 break;
             default:
-                System.out.println("Invalid input. Please insert correct number.");
+                System.out.println("Unknown user choice " + choice);
                 System.out.println(" ");
                 launchMenu();
                 break;
